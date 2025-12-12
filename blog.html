@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog de Dominican Guides Hub - Guías, consejos y experiencias sobre turismo en la República Dominicana. Descubre cómo elegir los mejores guías turísticos locales.">
+    <meta name="keywords" content="blog turismo, guías dominicanos, consejos de viaje, República Dominicana, experiencias turísticas">
+    <meta name="author" content="Dominican Guides Hub">
+    <title>Blog - Dominican Guides Hub | Guías Turísticos Locales Dominicanos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300,400,500,600,700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        :root {
+            --primary: #5B4BFF;
+            --secondary: #EEF0FF;
+            --accent: #00E5A8;
+        }
+        
+        body {
+            background-color: #FFFFFF;
+            color: #1A1A1A;
+        }
+        
+        .text-primary {
+            color: #5B4BFF;
+        }
+        
+        .bg-primary {
+            background-color: #5B4BFF;
+        }
+        
+        .bg-secondary {
+            background-color: #EEF0FF;
+        }
+        
+        .text-accent {
+            color: #00E5A8;
+        }
+        
+        .border-primary {
+            border-color: #5B4BFF;
+        }
+        
+        .hover-lift {
+            transition: all 0.3s ease-out;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(91, 75, 255, 0.15);
+        }
+        
+        .btn-primary {
+            background-color: #5B4BFF;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease-out;
+            display: inline-block;
+            cursor: pointer;
+        }
+        
+        .btn-primary:hover {
+            filter: brightness(1.1);
+            transform: scale(1.05);
+            box-shadow: 0 20px 25px -5px rgba(91, 75, 255, 0.3);
+        }
+        
+        .faq-question {
+            cursor: pointer;
+            transition: all 0.3s ease-out;
+        }
+        
+        .faq-question:hover {
+            color: #5B4BFF;
+        }
+        
+        .faq-icon {
+            transition: transform 0.3s ease-out;
+        }
+        
+        .faq-answer {
+            max-height: 500px;
+            overflow: hidden;
+            transition: all 0.3s ease-out;
+        }
+        
+        .faq-answer.hidden {
+            max-height: 0;
+            opacity: 0;
+        }
+        
+        header {
+            background-color: #FFFFFF;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+        
+        .mobile-menu {
+            transition: all 0.3s ease-out;
+        }
+        
+        .mobile-menu.hidden {
+            display: none;
+        }
+        
+        .star-rating {
+            color: #FFB800;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease-out;
+        }
+        
+        .card-hover:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 25px -5px rgba(91, 75, 255, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Header -->
+    <header class="w-full bg-white shadow-sm">
+        <nav class="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="https://RonAdames.github.io/dominican-guides-hub-2025-12-12-f6buo" class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-primary rounded flex items-center justify-center">
+                    <i data-lucide="compass" class="text-white" style="width: 24px; height: 24px;"></i>
+                </div>
+                <span class="text-xl font-semibold text-primary">Dominican Guides</span>
+            </a>
+
+            <!-- Back Link -->
+            <a href="https://RonAdames.github.io/dominican-guides-hub-2025-12-12-f6buo" class="text-gray-700 hover:text-primary transition-colors duration-300 font-normal">
+                ← Back
+            </a>
+        </nav>
+    </header>
+
+    <!-- Hero Section for Blog -->
+    <section class="w-full py-16 md:py-20 bg-gradient-to-br from-white via-secondary to-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-primary opacity-5 rounded-full -mr-48 -mt-48"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-accent opacity-5 rounded-full -ml-48 -mb-48"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 leading-tight mb-6">
+                    Nuestro Blog
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 font-light leading-relaxed max-w-2xl mx-auto">
+                    Descubre guías completas, consejos de viaje y experiencias auténticas sobre turismo en la República Dominicana. Aprende cómo maximizar tu experiencia con nuestros guías turísticos locales certificados.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Purpose Section -->
+    <section class="w-full py-12 md:py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12">
+                <!-- Purpose 1 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-secondary rounded-lg flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="book-open" class="text-primary" style="width: 32px; height: 32px;"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Guías Completas</h3>
+                    <p class="text-gray-600 font-light leading-relaxed">
+                        Tutoriales detallados y guías paso a paso para ayudarte a elegir el mejor guía turístico y planificar tus experiencias en la República Dominicana.
+                    </p>
+                </div>
+
+                <!-- Purpose 2 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-secondary rounded-lg flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="lightbulb" class="text-primary" style="width: 32px; height: 32px;"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Consejos Prácticos</h3>
+                    <p class="text-gray-600 font-light leading-relaxed">
+                        Consejos valiosos y recomendaciones de expertos para maximizar tu experiencia de viaje y aprovechar al máximo cada aventura.
+                    </p>
+                </div>
+
+                <!-- Purpose 3 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-secondary rounded-lg flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="map-pin" class="text-primary" style="width: 32px; height: 32px;"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Destinos Locales</h3>
+                    <p class="text-gray-600 font-light leading-relaxed">
+                        Descubre lugares ocultos, experiencias auténticas y secretos locales que solo nuestros guías certificados conocen.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Blog Post -->
+    <section class="w-full py-12 md:py-16 bg-secondary">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+            <div class="mb-12">
+                <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-8">Artículo Destacado</h2>
+            </div>
+
+            <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl border border-gray-100">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-0">
+                    <!-- Featured Post Image Placeholder -->
+                    <div class="lg:col-span-1 bg-gradient-to-br from-primary to-accent opacity-20 h-64 lg:h-auto flex items-center justify-center">
+                        <i data-lucide="map-pin" class="text-primary" style="width: 80px; height: 80px;"></i>
+                    </div>
+
+                    <!-- Featured Post Content -->
+                    <div class="lg:col-span-2 p-8 md:p-12">
+                        <div class="flex items-center gap-4 mb-4">
+                            <span class="text-sm font-semibold text-primary bg-secondary px-3 py-1 rounded-full">Destacado</span>
+                            <span class="text-sm text-gray-600 font-light">12 de Diciembre, 2025</span>
+                        </div>
+                        
+                        <h3 class="text-2xl md:text-3xl font-semibold text-gray-900 mb-4 leading-tight">
+                            Cómo Elegir el Mejor Guía Turístico en República Dominicana: Guía Completa 2025
+                        </h3>
+                        
+                        <p class="text-gray-700 font-light leading-relaxed mb-6">
+                            Elegir el guía turístico adecuado en la República Dominicana transforma tu experiencia de viaje de un simple turismo a una inmersión cultural auténtica. Esta guía completa enfatiza la importancia de verificar credenciales, revisar referencias y evaluar calificaciones profesionales. Los criterios clave incluyen licencia, experiencia, fluidez en idiomas, conocimiento especializado y confiabilidad. La guía cubre tipos especializados de guías—naturaleza, buceo, históricos y aventura—y proporciona preguntas esenciales antes de reservar. Advierte sobre errores comunes como priorizar el precio sobre la calidad y contratar guías callejeros sin licencia. Al invertir en profesionales verificados a través de plataformas confiables, obtienes seguridad, insights locales y apoyas el turismo sostenible mientras creas recuerdos dominicanos inolvidables.
+                        </p>
+                        
+                        <a href="https://RonAdames.github.io/dominican-guides-hub-2025-12-12-f6buo/blog/c-mo-elegir-el-mejor-gu-a-tur-stico-en-rep-blica-d.html" class="btn-primary inline-block">
+                            Leer Más
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts Grid -->
+    <section class="w-full py-12 md:py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+            <div class="mb-12">
+                <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-4">Más Artículos</h2>
+                <p class="text-lg text-gray-600 font-light">
+                    Próximamente, más contenido sobre turismo, guías locales y experiencias dominicanas.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <!-- Placeholder Post 1 -->
+                <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl border border-gray-100 flex flex-col">
+                    <div class="bg-gradient-to-br from-primary to-accent opacity-20 h-48 flex items-center justify-center">
+                        <i data-lucide="camera" class="text-primary" style="width: 60px; height: 60px;"></i>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="text-xs font-semibold text-gray-500 uppercase">Próximamente</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3 leading-tight flex-grow">
+                            Experiencias de Buceo en la República Dominicana
+                        </h3>
+                        <p class="text-gray-600 font-light leading-relaxed mb-4 flex-grow">
+                            Descubre los mejores sitios de buceo y cómo elegir un guía especializado...
+                        </p>
+                        <button class="px-6 py-2 border-2 border-primary text-primary font-semibold rounded hover:bg-primary hover:text-white transition-all duration-300 w-full" disabled>
+                            Próximamente
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Placeholder Post 2 -->
+                <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl border border-gray-100 flex flex-col">
+                    <div class="bg-gradient-to-br from-accent to-primary opacity-20 h-48 flex items-center justify-center">
+                        <i data-lucide="mountain" class="text-primary" style="width: 60px; height: 60px;"></i>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="text-xs font-semibold text-gray-500 uppercase">Próximamente</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3 leading-tight flex-grow">
+                            Senderismo y Aventura: Guías Especializados en Naturaleza
+                        </h3>
+                        <p class="text-gray-600 font-light leading-relaxed mb-4 flex-grow">
+                            Explora las montañas y paisajes naturales con guías expertos en aventura...
+                        </p>
+                        <button class="px-6 py-2 border-2 border-primary text-primary font-semibold rounded hover:bg-primary hover:text-white transition-all duration-300 w-full" disabled>
+                            Próximamente
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Placeholder Post 3 -->
+                <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl border border-gray-100 flex flex-col">
+                    <div class="bg-gradient-to-br from-primary opacity-20 h-48 flex items-center justify-center">
+                        <i data-lucide="history" class="text-primary" style="width: 60px; height: 60px;"></i>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="text-xs font-semibold text-gray-500 uppercase">Próximamente</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3 leading-tight flex-grow">
+                            Recorridos Históricos: La Herencia Colonial Dominicana
+                        </h3>
+                        <p class="text-gray-600 font-light leading-relaxed mb-4 flex-grow">
+                            Viaja a través del tiempo con guías especializados en historia y cultura...
+                        </p>
+                        <button class="px-6 py-2 border-2 border-primary text-primary font-semibold rounded hover:bg-primary hover:text-white transition-all duration-300 w-full" disabled>
+                            Próximamente
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="w-full py-16 md:py-24 bg-cover bg-center relative" style="background-image: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.7)), url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop');">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 text-center relative z-10">
+            <h2 class="text-3xl md:text-5xl font-semibold text-white mb-6 leading-tight">
+                ¿Listo para Vivir una Experiencia Inolvidable?
+            </h2>
+            <p class="text-lg md:text-xl text-gray-100 font-light mb-8 max-w-2xl mx-auto">
+                Únete a miles de viajeros que han descubierto la verdadera belleza de la República Dominicana con nuestros guías locales certificados.
+            </p>
+            <a href="https://domincanguideshub.com" class="btn-primary inline-block">
+                Reserva Tu Guía Ahora
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="w-full bg-gray-900 text-gray-100 py-12 md:py-16">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-primary rounded flex items-center justify-center">
+                            <i data-lucide="compass" class="text-white" style="width: 24px; height: 24px;"></i>
+                        </div>
+                        <span class="text-xl font-semibold text-white">Dominican Guides</span>
+                    </div>
+                    <p class="text-gray-400 font-light leading-relaxed">
+                        Conectando viajeros con guías locales auténticos para experiencias inolvidables en la República Dominicana.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Enlaces Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="https://RonAdames.github.io/dominican-guides-hub-2025-12-12-f6buo#features" class="text-gray-400 hover:text-primary transition-colors duration-300 font-light">Características</a></li>
+                        <li><a href="https://RonAdames.github.io/dominican-guides-hub-2025-12-12-f6buo#benefits" class="text-gray-400 hover:text-primary transition-colors duration-300 font-light">Beneficios</a></li>
+                        <li><a href="https://RonAdames.github.io/dominican-guides-hub-2025-12-12-f6buo#testimonials" class="text-gray-400 hover:text-primary transition-colors duration-300 font-light">Testimonios</a></li>
+                        <li><a href="https://RonAdames.github.io/dominican-guides-hub-2025-12-12-f6buo#faq" class="text-gray-400 hover:text-primary transition-colors duration-300 font-light">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+
+                <!-- Pages -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Páginas</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300 font-light">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Contacto</h4>
+                    <p class="text-gray-400 font-light mb-4">
+                        <a href="mailto:info@domincanguideshub.com" class="hover:text-primary transition-colors duration-300">info@domincanguideshub.com</a>
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center hover:brightness-110 transition-all duration-300">
+                            <i class="fab fa-facebook-f text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center hover:brightness-110 transition-all duration-300">
+                            <i class="fab fa-instagram text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center hover:brightness-110 transition-all duration-300">
+                            <i class="fab fa-twitter text-white"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <p class="text-gray-400 font-light text-center md:text-left">
+                        &copy; 2025 Dominican Guides Hub. Todos los derechos reservados.
+                    </p>
+                    <p class="text-gray-400 font-light text-center md:text-right mt-4 md:mt-0">
+                        Hecho con <i data-lucide="heart" class="inline text-accent" style="width: 16px; height: 16px;"></i> en la República Dominicana
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Lucide Icons
+            lucide.createIcons();
+
+            // Smooth Scroll for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#' && href.length > 1) {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
