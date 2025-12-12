@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dominican Guides Hub - Encuentra los mejores guías turísticos locales dominicanos. Experiencias auténticas con guías verificados y confiables.">
+    <meta name="keywords" content="guías turísticos, República Dominicana, turismo local, experiencias auténticas">
+    <meta name="author" content="Dominican Guides Hub">
+    <title>Dominican Guides Hub - Los Mejores Guías Turísticos Locales</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300,400,500,600,700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        :root {
+            --primary: #5B4BFF;
+            --secondary: #EEF0FF;
+            --accent: #00E5A8;
+        }
+        
+        body {
+            background-color: #FFFFFF;
+            color: #1A1A1A;
+        }
+        
+        .text-primary {
+            color: #5B4BFF;
+        }
+        
+        .bg-primary {
+            background-color: #5B4BFF;
+        }
+        
+        .bg-secondary {
+            background-color: #EEF0FF;
+        }
+        
+        .text-accent {
+            color: #00E5A8;
+        }
+        
+        .border-primary {
+            border-color: #5B4BFF;
+        }
+        
+        .hover-lift {
+            transition: all 0.3s ease-out;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(91, 75, 255, 0.15);
+        }
+        
+        .btn-primary {
+            background-color: #5B4BFF;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease-out;
+            display: inline-block;
+            cursor: pointer;
+        }
+        
+        .btn-primary:hover {
+            filter: brightness(1.1);
+            transform: scale(1.05);
+            box-shadow: 0 20px 25px -5px rgba(91, 75, 255, 0.3);
+        }
+        
+        .faq-question {
+            cursor: pointer;
+            transition: all 0.3s ease-out;
+        }
+        
+        .faq-question:hover {
+            color: #5B4BFF;
+        }
+        
+        .faq-icon {
+            transition: transform 0.3s ease-out;
+        }
+        
+        .faq-answer {
+            max-height: 500px;
+            overflow: hidden;
+            transition: all 0.3s ease-out;
+        }
+        
+        .faq-answer.hidden {
+            max-height: 0;
+            opacity: 0;
+        }
+        
+        header {
+            background-color: #FFFFFF;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+        
+        .mobile-menu {
+            transition: all 0.3s ease-out;
+        }
+        
+        .mobile-menu.hidden {
+            display: none;
+        }
+        
+        .star-rating {
+            color: #FFB800;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease-out;
+        }
+        
+        .card-hover:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 25px -5px rgba(91, 75, 255, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Header -->
+    <header class="w-full bg-white shadow-sm">
+        <nav class="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-primary rounded flex items-center justify-center">
+                    <i data-lucide="compass" class="text-white" style="width: 24px; height: 24px;"></i>
+                </div>
+                <span class="text-xl font-semibold text-primary">Dominican Guides</span>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#features" class="text-gray-700 hover:text-primary transition-colors duration-300 font-normal">Características</a>
+                <a href="#benefits" class="text-gray-700 hover:text-primary transition-colors duration-300 font-normal">Beneficios</a>
+                <a href="#testimonials" class="text-gray-700 hover:text-primary transition-colors duration-300 font-normal">Testimonios</a>
+                <a href="#faq" class="text-gray-700 hover:text-primary transition-colors duration-300 font-normal">Preguntas</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-button md:hidden p-2 hover:bg-secondary rounded transition-colors duration-300">
+                <i class="fas fa-bars text-primary" style="font-size: 24px;"></i>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden bg-white border-t border-gray-100">
+            <div class="max-w-7xl mx-auto px-4 py-4 space-y-4">
+                <a href="#features" class="block text-gray-700 hover:text-primary transition-colors duration-300 font-normal py-2">Características</a>
+                <a href="#benefits" class="block text-gray-700 hover:text-primary transition-colors duration-300 font-normal py-2">Beneficios</a>
+                <a href="#testimonials" class="block text-gray-700 hover:text-primary transition-colors duration-300 font-normal py-2">Testimonios</a>
+                <a href="#faq" class="block text-gray-700 hover:text-primary transition-colors duration-300 font-normal py-2">Preguntas</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="w-full py-16 md:py-20 bg-gradient-to-br from-white via-secondary to-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-primary opacity-5 rounded-full -mr-48 -mt-48"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-accent opacity-5 rounded-full -ml-48 -mb-48"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 leading-tight mb-6">
+                        Encuentra Los Mejores Guías Turísticos Locales Dominicanos
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-600 font-light leading-relaxed mb-8">
+                        Descubre experiencias auténticas con guías turísticos verificados y confiables. Explora la belleza de la República Dominicana con expertos locales que conocen cada rincón.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://domincanguideshub.com" class="btn-primary text-center">
+                            Comenzar Ahora
+                        </a>
+                        <button class="px-6 py-3 border-2 border-primary text-primary font-semibold rounded hover:bg-primary hover:text-white transition-all duration-300 hover:scale-105">
+                            Más Información
+                        </button>
+                    </div>
+                </div>
+                <div class="hidden lg:flex items-center justify-center">
+                    <div class="relative w-full h-96">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary to-accent opacity-20 rounded-lg"></div>
+                        <div class="absolute inset-4 bg-white rounded-lg flex items-center justify-center">
+                            <i data-lucide="map-pin" class="text-primary" style="width: 120px; height: 120px;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="w-full py-12 md:py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-4">Características Principales</h2>
+                <p class="text-lg text-gray-600 font-light max-w-2xl mx-auto">
+                    Descubre lo que hace que Dominican Guides Hub sea la plataforma perfecta para tus aventuras locales
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                <!-- Feature 1 -->
+                <div class="card-hover bg-white border border-gray-100 rounded-lg p-8 shadow-md hover:shadow-xl">
+                    <div class="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="user-check" class="text-primary" style="width: 24px; height: 24px;"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Guías Expertos Verificados</h3>
+                    <p class="text-gray-600 font-light leading-relaxed">
+                        Todos nuestros guías turísticos han sido cuidadosamente seleccionados y verificados. Contamos con profesionales certificados con años de experiencia en el turismo local dominicano, garantizando la máxima calidad en cada experiencia.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="card-hover bg-white border border-gray-100 rounded-lg p-8 shadow-md hover:shadow-xl">
+                    <div class="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="star" class="text-primary" style="width: 24px; height: 24px;"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Reseñas Verificadas</h3>
+                    <p class="text-gray-600 font-light leading-relaxed">
+                        Todas las reseñas provienen de clientes reales que han utilizado nuestros servicios. Nuestro sistema de calificación transparente te ayuda a elegir el guía perfecto basado en experiencias auténticas de otros viajeros.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="card-hover bg-white border border-gray-100 rounded-lg p-8 shadow-md hover:shadow-xl">
+                    <div class="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="calendar" class="text-primary" style="width: 24px; height: 24px;"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Reserva Fácil</h3>
+                    <p class="text-gray-600 font-light leading-relaxed">
+                        Nuestro proceso de reserva es simple y rápido. Con solo unos clics, puedes reservar tu guía, confirmar fechas y comenzar a planificar tu aventura dominicana sin complicaciones.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="w-full py-12 md:py-16 bg-secondary">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-4">Beneficios de Elegir Dominican Guides Hub</h2>
+                <p class="text-lg text-gray-600 font-light max-w-2xl mx-auto">
+                    Vive experiencias incomparables con nuestros guías locales certificados
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                <!-- Benefit 1 -->
+                <div class="flex gap-6">
+                    <div class="flex-shrink-0">
+                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="check" class="text-white" style="width: 24px; height: 24px;"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Experiencias Auténticas Locales</h3>
+                        <p class="text-gray-600 font-light leading-relaxed">
+                            Nuestros guías te llevarán más allá de los lugares turísticos comunes. Descubre las joyas ocultas, las tradiciones locales y la verdadera esencia de la República Dominicana que solo los locales conocen.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="flex gap-6">
+                    <div class="flex-shrink-0">
+                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="shield" class="text-white" style="width: 24px; height: 24px;"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Guías Confiables y Seguros</h3>
+                        <p class="text-gray-600 font-light leading-relaxed">
+                            Todos nuestros guías han pasado verificaciones exhaustivas de seguridad y antecedentes. Puedes viajar con confianza sabiendo que estás en manos de profesionales certificados y de confianza.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="flex gap-6">
+                    <div class="flex-shrink-0">
+                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="globe" class="text-white" style="width: 24px; height: 24px;"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Conocimiento Profundo del Territorio</h3>
+                        <p class="text-gray-600 font-light leading-relaxed">
+                            Nuestros guías poseen un conocimiento profundo de cada región dominicana. Desde la historia colonial hasta la naturaleza tropical, compartirán insights valiosos que enriquecerán tu viaje.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Benefit 4 -->
+                <div class="flex gap-6">
+                    <div class="flex-shrink-0">
+                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="zap" class="text-white" style="width: 24px; height: 24px;"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Servicio Rápido y Eficiente</h3>
+                        <p class="text-gray-600 font-light leading-relaxed">
+                            Desde la consulta inicial hasta la ejecución de tu tour, nos aseguramos de que todo sea rápido y eficiente. Nuestro equipo está disponible para responder tus preguntas en cualquier momento.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="w-full py-12 md:py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-4">Sobre Dominican Guides Hub</h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+                <div class="hidden lg:flex items-center justify-center">
+                    <div class="relative w-full h-96">
+                        <div class="absolute inset-0 bg-gradient-to-br from-accent to-primary opacity-20 rounded-lg"></div>
+                        <div class="absolute inset-4 bg-white rounded-lg flex items-center justify-center">
+                            <i data-lucide="heart" class="text-accent" style="width: 120px; height: 120px;"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <p class="text-lg text-gray-700 font-light leading-relaxed mb-6">
+                        Dominican Guides Hub nació de la pasión de un grupo de emprendedores dominicanos que querían compartir la verdadera belleza de su país con el mundo. Fundada en 2020, nuestra plataforma ha crecido significativamente, conectando a miles de viajeros con guías locales auténticos. Comenzamos con una visión simple pero poderosa: crear un puente entre turistas y la comunidad local, asegurando que cada viaje sea memorable, seguro y beneficioso para todos.
+                    </p>
+                    <p class="text-lg text-gray-700 font-light leading-relaxed">
+                        Nuestra misión es revolucionar la forma en que las personas experimentan la República Dominicana, promoviendo el turismo sostenible y responsable. Creemos en el poder de las conexiones auténticas, la transparencia total y la excelencia en el servicio. Nos comprometemos a apoyar a nuestros guías locales, garantizar la satisfacción de nuestros clientes y preservar la belleza natural y cultural de nuestra isla para las generaciones futuras. En Dominican Guides Hub, no solo vendemos tours; creamos experiencias que transforman vidas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="w-full py-12 md:py-16 bg-secondary">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-4">Lo Que Dicen Nuestros Clientes</h2>
+                <p class="text-lg text-gray-600 font-light max-w-2xl mx-auto">
+                    Experiencias reales de viajeros que han confiado en Dominican Guides Hub
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <!-- Testimonial 1 -->
+                <div class="card-hover bg-white rounded-lg p-6 shadow-md hover:shadow-xl border border-gray-100">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i data-lucide="star" class="text-yellow-400" style="width: 20px; height: 20px; fill: currentColor;"></i>
+                        <i data-lucide="star" class="text-yellow-400" style="width: 20px; height: 20px; fill: currentColor;"></i>
+                        <i data-lucide="star" class="text-yellow-400" style="width: 20px; height: 20px; fill: currentColor;"></i>
+                        <i data-lucide="star" class="text-yellow-400" style="width: 20px; height: 20px; fill: currentColor;"></i>
+                        <i data-lucide="star" class="text-yellow-400" style="width: 20px; height: 20px; fill: currentColor;"></i>
+                    </div>
+                    <p class="text-gray-700 font-light leading-relaxed mb-4">
+                        "Mi guía Juan fue increíble. Conocía todos los lugares secretos y compartió historias fascinantes sobre la cultura dominicana. Fue la mejor experiencia de viaje que he tenido."
+                    </p>
+                    <div>
+                        <p class="font-semibold text-gray-900">María González</p>
+                        <p class="text-sm text-gray-600 font-light">Viajera de España</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="card-hover bg-white rounded-lg p-6 shadow-md hover:shadow-xl border border-gray-100">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i data-lucide="star" class="text-yellow-400" style="width: 20px; height: 20px; fill: currentColor;"></i>
+                        <i data-lucide="star" class="text-yellow-400" style="width: 20px; height: 20px; fill: currentColor;"></i>
+                        <i data-lucide="star" class="text-yellow-400" style="width: 20px; height: 20px; fill: currentColor;"></i>
+                        <i data-lucide="star" class="text-yellow-400" style="width: 20px; height: 20px; fill: currentColor;"></i>
+                        <i data-lucide="star" class="text-yellow-400" style="width: 20px; height: 20px; fill: currentColor;"></i>
+                    </div>
+                    <p class="text-gray-700 font-light leading-relaxed mb-4">
+                        "Reservar fue muy fácil y el servicio fue excepcional. El guía llegó a tiempo, fue muy profesional y nos mostró lugares que nunca hubiéramos encontrado solos. ¡Definitivamente volveremos!"
+                    </p>
+                    <div>
+                        <p class="font-semibold text-gray-900">Carlos Rodríguez</p>
+                        <p class="text-sm text-gray-600 font-light">Turista de México</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="card-hover bg-white rounded-lg p-6 shadow-md hover:shadow-xl border border-gray-100">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i data-lucide="star" class="text-yellow-400" style="width: 20px; height: 20px; fill: currentColor;"></i>
+                        <i data-lucide="star" class="text-yellow-400" style="width: 20px; height: 20px; fill: currentColor;"></i>
+                        <i data-lucide="star" class="text-yellow-400" style="width: 20px; height: 20px; fill: currentColor;"></i>
+                        <i data-lucide="star" class="text-yellow-400" style="width: 20px; height: 20px; fill: currentColor;"></i>
+                        <i data-lucide="star" class="text-yellow-400" style="width: 20px; height: 20px; fill: currentColor;"></i>
+                    </div>
+                    <p class="text-gray-700 font-light leading-relaxed mb-4">
+                        "Sentí que el guía realmente se preocupaba por nuestra experiencia. Nos llevó a playas vírgenes, restaurantes locales auténticos y compartió su conocimiento sobre la historia dominicana de una manera muy personal y apasionada."
+                    </p>
+                    <div>
+                        <p class="font-semibold text-gray-900">Sophie Dubois</p>
+                        <p class="text-sm text-gray-600 font-light">Viajera de Francia</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="card-hover bg-white rounded-lg p-6 shadow-md hover:shadow-xl border border-gray-100">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i data-lucide="star" class="text-yellow-400" style="width: 20px; height: 20px; fill: currentColor;"></i>
+                        <i data-lucide="star" class="text-yellow-400" style="width: 20px; height: 20px; fill: currentColor;"></i>
+                        <i data-lucide="star" class="text-yellow-400" style="width: 20px; height: 20px; fill: currentColor;"></i>
+                        <i data-lucide="star" class="text-yellow-400" style="width: 20px; height: 20px; fill: currentColor;"></i>
+                        <i data-lucide="star" class="text-yellow-400" style="width: 20px; height: 20px; fill: currentColor;"></i>
+                    </div>
+                    <p class="text-gray-700 font-light leading-relaxed mb-4">
+                        "Dominican Guides Hub es confiable y profesional. El proceso de verificación de guías es riguroso, lo que te da paz mental. Recomiendo este servicio a todos mis amigos que viajan a la República Dominicana."
+                    </p>
+                    <div>
+                        <p class="font-semibold text-gray-900">James Mitchell</p>
+                        <p class="text-sm text-gray-600 font-light">Viajero de Estados Unidos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="w-full py-16 md:py-24 bg-cover bg-center relative" style="background-image: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.7)), url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop');">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 text-center relative z-10">
+            <h2 class="text-3xl md:text-5xl font-semibold text-white mb-6 leading-tight">
+                ¿Listo para Vivir una Experiencia Inolvidable?
+            </h2>
+            <p class="text-lg md:text-xl text-gray-100 font-light mb-8 max-w-2xl mx-auto">
+                Únete a miles de viajeros que han descubierto la verdadera belleza de la República Dominicana con nuestros guías locales certificados.
+            </p>
+            <a href="https://domincanguideshub.com" class="btn-primary inline-block">
+                Reserva Tu Guía Ahora
+            </a>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="w-full py-12 md:py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-4">Preguntas Frecuentes</h2>
+                <p class="text-lg text-gray-600 font-light max-w-2xl mx-auto">
+                    Encuentra respuestas a las preguntas más comunes sobre nuestros servicios
+                </p>
+            </div>
+
+            <div class="max-w-3xl mx-auto space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item border border-gray-200 rounded-lg overflow-hidden">
+                    <div class="faq-question bg-secondary hover:bg-opacity-80 px-6 py-4 flex items-center justify-between transition-all duration-300">
+                        <h3 class="text-lg font-semibold text-gray-900">¿Cómo verifican ustedes a los guías turísticos?</h3>
+                        <i data-lucide="chevron-down" class="faq-icon text-primary transition-transform duration-300" style="width: 24px; height: 24px;"></i>
+                    </div>
+                    <div class="faq-answer hidden bg-white px-6 py-4 border-t border-gray-200">
+                        <p class="text-gray-700 font-light leading-relaxed">
+                            Nuestro proceso de verificación es exhaustivo y riguroso. Todos los guías deben pasar verificaciones de antecedentes penales, verificación de identidad, revisión de credenciales profesionales y certificaciones en turismo. Además, realizamos entrevistas personales y solicitamos referencias de clientes anteriores. Todos los guías deben tener un seguro de responsabilidad civil y estar afiliados con organismos turísticos oficiales.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item border border-gray-200 rounded-lg overflow-hidden">
+                    <div class="faq-question bg-secondary hover:bg-opacity-80 px-6 py-4 flex items-center justify-between transition-all duration-300">
+                        <h3 class="text-lg font-semibold text-gray-900">¿Cuáles son los métodos de pago disponibles?</h3>
+                        <i data-lucide="chevron-down" class="faq-icon text-primary transition-transform duration-300" style="width: 24px; height: 24px;"></i>
+                    </div>
+                    <div class="faq-answer hidden bg-white px-6 py-4 border-t border-gray-200">
+                        <p class="text-gray-700 font-light leading-relaxed">
+                            Aceptamos múltiples formas de pago para tu conveniencia. Puedes pagar con tarjetas de crédito (Visa, Mastercard, American Express), transferencia bancaria, PayPal y billeteras digitales. También ofrecemos planes de pago sin interés para reservas de grupos grandes. Todos los pagos son procesados de forma segura a través de plataformas certificadas con encriptación SSL.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item border border-gray-200 rounded-lg overflow-hidden">
+                    <div class="faq-question bg-secondary hover:bg-opacity-80 px-6 py-4 flex items-center justify-between transition-all duration-300">
+                        <h3 class="text-lg font-semibold text-gray-900">¿Qué sucede si necesito cancelar mi reserva?</h3>
+                        <i data-lucide="chevron-down" class="faq-icon text-primary transition-transform duration-300" style="width: 24px; height: 24px;"></i>
+                    </div>
+                    <div class="faq-answer hidden bg-white px-6 py-4 border-t border-gray-200">
+                        <p class="text-gray-700 font-light leading-relaxed">
+                            Entendemos que los planes pueden cambiar. Ofrecemos una política de cancelación flexible: si cancelas con más de 7 días de anticipación, recibirás un reembolso completo. Las cancelaciones entre 3 y 7 días reciben un reembolso del 50%, y las cancelaciones con menos de 3 días no son reembolsables. Sin embargo, puedes reprogramar tu tour para otra fecha sin cargos adicionales.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item border border-gray-200 rounded-lg overflow-hidden">
+                    <div class="faq-question bg-secondary hover:bg-opacity-80 px-6 py-4 flex items-center justify-between transition-all duration-300">
+                        <h3 class="text-lg font-semibold text-gray-900">¿Los guías hablan otros idiomas además del español?</h3>
+                        <i data-lucide="chevron-down" class="faq-icon text-primary transition-transform duration-300" style="width: 24px; height: 24px;"></i>
+                    </div>
+                    <div class="faq-answer hidden bg-white px-6 py-4 border-t border-gray-200">
+                        <p class="text-gray-700 font-light leading-relaxed">
+                            Sí, muchos de nuestros guías son multilingües. Contamos con guías que hablan inglés, francés, alemán, italiano, portugués y otros idiomas. Cuando hagas tu reserva, puedes especificar el idioma que prefieres, y nos aseguraremos de asignarte un guía que hable tu idioma. Si no disponemos de un guía en tu idioma específico, te lo comunicaremos con anticipación para que puedas hacer arreglos alternativos.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item border border-gray-200 rounded-lg overflow-hidden">
+                    <div class="faq-question bg-secondary hover:bg-opacity-80 px-6 py-4 flex items-center justify-between transition-all duration-300">
+                        <h3 class="text-lg font-semibold text-gray-900">¿Qué incluye el precio de un tour?</h3>
+                        <i data-lucide="chevron-down" class="faq-icon text-primary transition-transform duration-300" style="width: 24px; height: 24px;"></i>
+                    </div>
+                    <div class="faq-answer hidden bg-white px-6 py-4 border-t border-gray-200">
+                        <p class="text-gray-700 font-light leading-relaxed">
+                            El precio del tour incluye los servicios del guía certificado, la duración acordada del tour y acceso a lugares turísticos. Dependiendo del tour específico, puede incluir transporte, comidas, entrada a museos o playas privadas. Cada listado de tour especifica claramente qué está incluido. Los gastos no incluidos típicamente son propinas, bebidas alcohólicas adicionales y compras personales. Siempre proporcionamos un desglose detallado antes de confirmar tu reserva.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="w-full bg-gray-900 text-gray-100 py-12 md:py-16">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-primary rounded flex items-center justify-center">
+                            <i data-lucide="compass" class="text-white" style="width: 24px; height: 24px;"></i>
+                        </div>
+                        <span class="text-xl font-semibold text-white">Dominican Guides</span>
+                    </div>
+                    <p class="text-gray-400 font-light leading-relaxed">
+                        Conectando viajeros con guías locales auténticos para experiencias inolvidables en la República Dominicana.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Enlaces Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#features" class="text-gray-400 hover:text-primary transition-colors duration-300 font-light">Características</a></li>
+                        <li><a href="#benefits" class="text-gray-400 hover:text-primary transition-colors duration-300 font-light">Beneficios</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-primary transition-colors duration-300 font-light">Testimonios</a></li>
+                        <li><a href="#faq" class="text-gray-400 hover:text-primary transition-colors duration-300 font-light">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+
+                <!-- Pages -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Páginas</h4>
+                    <ul class="space-y-2">
+                        <li><a href="blog.html" class="text-gray-400 hover:text-primary transition-colors duration-300 font-light">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Contacto</h4>
+                    <p class="text-gray-400 font-light mb-4">
+                        <a href="mailto:info@domincanguideshub.com" class="hover:text-primary transition-colors duration-300">info@domincanguideshub.com</a>
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center hover:brightness-110 transition-all duration-300">
+                            <i class="fab fa-facebook-f text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center hover:brightness-110 transition-all duration-300">
+                            <i class="fab fa-instagram text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center hover:brightness-110 transition-all duration-300">
+                            <i class="fab fa-twitter text-white"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <p class="text-gray-400 font-light text-center md:text-left">
+                        &copy; 2025 Dominican Guides Hub. Todos los derechos reservados.
+                    </p>
+                    <p class="text-gray-400 font-light text-center md:text-right mt-4 md:mt-0">
+                        Hecho con <i data-lucide="heart" class="inline text-accent" style="width: 16px; height: 16px;"></i> en la República Dominicana
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Lucide Icons
+            lucide.createIcons();
+
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.querySelector('.mobile-menu-button');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars');
+                        icon.classList.toggle('fa-times');
+                    }
+                });
+
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+
+            // FAQ Accordion Toggle
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                if (question) {
+                    question.addEventListener('click', () => {
+                        const answer = item.querySelector('.faq-answer');
+                        const isOpen = !answer.classList.contains('hidden');
+                        
+                        // Close all other FAQ items
+                        faqItems.forEach(otherItem => {
+                            if (otherItem !== item) {
+                                otherItem.querySelector('.faq-answer')?.classList.add('hidden');
+                                otherItem.querySelector('.faq-icon')?.classList.remove('rotate-180');
+                            }
+                        });
+                        
+                        // Toggle current item
+                        answer?.classList.toggle('hidden');
+                        item.querySelector('.faq-icon')?.classList.toggle('rotate-180');
+                    });
+                }
+            });
+
+            // Smooth Scroll for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#' && href.length > 1) {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
